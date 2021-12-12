@@ -4,8 +4,8 @@ login_form.addEventListener('submit', async (e) => {
     e.preventDefault();
     e.stopPropagation();
     if (login_form.checkValidity() === true) {
-        document.getElementById("submit-button").style.display = "none";
-        document.getElementById("spinner-button").style.display = "block";
+        document.getElementById("submit-button");
+        document.getElementById("spinner-button");
         let response = await fetch('api/alumni/login', {
             method: 'POST',
             headers: {
@@ -21,16 +21,16 @@ login_form.addEventListener('submit', async (e) => {
         console.log(response);
         if(result['status'] === 200){
             let data =await response.json();
-            document.getElementById("submit-button").style.display = "block";
-            document.getElementById("spinner-button").style.display = "none";
+            document.getElementById("submit-button");
+            document.getElementById("spinner-button");
 
             sessionStorage.setItem('id',data['id']);
             location.href = "dashboard.html";
         }else{
-            document.getElementById("submit-button").style.display = "block";
-            document.getElementById("spinner-button").style.display = "none";
+            document.getElementById("submit-button");
+            document.getElementById("spinner-button");
 
-            document.getElementById("login-alert").style.display = "block";
+            document.getElementById("login-alert");
         }
     }
 });

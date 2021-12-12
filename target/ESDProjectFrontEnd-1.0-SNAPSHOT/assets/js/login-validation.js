@@ -16,8 +16,8 @@ login_form.addEventListener('submit', async (e) => {
                 password: document.getElementById('password').value,
             })
         });
-        //let result = await response;
-        let result=response;
+        let result = await response;
+        // let result=response;
         console.log(response);
         if(result['status'] === 200){
             let data =await response.json();

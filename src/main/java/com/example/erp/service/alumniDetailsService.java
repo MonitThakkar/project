@@ -14,7 +14,7 @@ public class alumniDetailsService {
         return alumni.viewDetails(al);
     }
     public alumni_details updateDetails(alumni_details al){
-        System.out.println("In Service");
+       // System.out.println("In Service");
         return alumni.updateDetails(al);
     }
 }

@@ -36,6 +36,7 @@ async function fetch_values() {
     document.getElementById("success-alert").style.display = "none";
     document.getElementById('error-alert').style.display="none";
     if (!sessionStorage.getItem('id')) {
+        //getting the id from the session local storage
         location.href = "index.html";
         return;
     }

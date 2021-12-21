@@ -27,14 +27,14 @@ login_form.addEventListener('submit', async (e) => {
             a JSON object from the response.
             The method returns a promise, so you have to wait for the JSON: await response.json().*/
             document.getElementById("submit-button");
-            // document.getElementById("spinner-button");
+            //document.getElementById("spinner-button");
 
             sessionStorage.setItem('id',data['id']);
             //this method will store the id in the session storage and we can usse it for further use
             location.href = "dashboard.html";
         }else{
             document.getElementById("submit-button");
-            document.getElementById("spinner-button");
+            //document.getElementById("spinner-button");
 
             document.getElementById("login-alert");
         }

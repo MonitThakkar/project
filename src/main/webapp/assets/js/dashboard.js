@@ -6,7 +6,7 @@ detailsUpdate.addEventListener('submit', async (e) => {
     console.log("Event occured");
     if (detailsUpdate.checkValidity() === true) {
         document.getElementById("submit-button").style.display = "none";
-        document.getElementById("spinner-button").style.display = "block";
+        // document.getElementById("spinner-button").style.display = "block";
         let response = await fetch('api/alumni/update', {
             method: 'POST',
             headers: {
@@ -22,11 +22,11 @@ detailsUpdate.addEventListener('submit', async (e) => {
         console.log(response);
         if(result['status'] === 200){
             document.getElementById("submit-button").style.display = "block";
-            document.getElementById("spinner-button").style.display = "none";
+            // document.getElementById("spinner-button").style.display = "none";
             document.getElementById("success-alert").style.display = "block";
         }else{
             document.getElementById("submit-button").style.display = "block";
-            document.getElementById("spinner-button").style.display = "none";
+            // document.getElementById("spinner-button").style.display = "none";
 
             document.getElementById("error-alert").style.display = "block";
         }
@@ -62,10 +62,4 @@ async function fetch_values() {
     }else{
     document.getElementById("error-alert").style.display="block";
     }
-}
-function logout(){
-    sessionStorage.removeItem('id');
-    sessionStorage.removeItem('id_edu');
-    sessionStorage.removeItem('id_org');
-    location.href="index.html";
 }

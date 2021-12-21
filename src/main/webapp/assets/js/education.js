@@ -141,9 +141,3 @@ async function update(){
         document.getElementById("error-alert").style.display = "block";
     }
 }
-function logout(){
-    sessionStorage.removeItem('id');
-    sessionStorage.removeItem('id_edu');
-    sessionStorage.removeItem('id_org');
-    location.href="index.html";
-}
